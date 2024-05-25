@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.edu.dicretas.Controller.CalculadoraController">
    <children>
-      <ComboBox fx:id="comb" layoutX="201.0" layoutY="89.0" onAction="#Seleccionar" prefHeight="25.0" prefWidth="179.0" promptText="Elija qué quiere calcular">
-          <items>
-          </items>
-      </ComboBox>
+      <ComboBox fx:id="comb" layoutX="199.0" layoutY="175.0" onAction="#Seleccionar" prefHeight="25.0" prefWidth="179.0" />
+      <Label layoutX="204.0" layoutY="38.0" prefHeight="47.0" prefWidth="169.0" text="Calculadora">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="102.0" prefHeight="47.0" prefWidth="479.0" text="Elija que operación desea realizar">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
