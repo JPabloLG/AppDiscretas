@@ -25,19 +25,17 @@ public class CalculadoraCombinatoria {
         if (k > n) {
             return 0;
         }
-        long nFactorial= permutaciones(n,n);
-        long nMenosKFactorial = (permutaciones(n-k,n-k));
-        long kFactorial = permutaciones(k, k);
+        long nFactorial= permutaciones(n);
+        long nMenosKFactorial = (permutaciones(n-k));
+        long kFactorial = permutaciones(k);
         long kFactorialPorNMenosKFactorial = kFactorial*nMenosKFactorial;
         long resultado = (nFactorial/kFactorialPorNMenosKFactorial);
         return resultado;
     }
 
-    private long permutaciones(int h,int j) {
-        if (h != j) {
-            return 0;
-        }
-        else if (h < 0) {
+    private long permutaciones(int h) {
+
+        if (h < 0) {
             throw new IllegalArgumentException("El número debe ser mayor o igual a 0.");
         }
         long resultado = 1;
@@ -50,4 +48,5 @@ public class CalculadoraCombinatoria {
     public String toString() {
         return "La combinatoria con n = " + n + " y  k = " + k + ", da como resultado = " + combinaciones();
     }
+    
 }

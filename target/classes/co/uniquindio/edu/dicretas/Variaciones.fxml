@@ -13,17 +13,17 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <TextField layoutX="226.0" layoutY="143.0" promptText="Ingrese n" />
-      <TextField layoutX="226.0" layoutY="188.0" promptText="Ingrese k" />
-      <Button layoutX="269.0" layoutY="237.0" mnemonicParsing="false" text="Calcular " textAlignment="CENTER" />
+      <TextField fx:id="txtNVariaciones" layoutX="226.0" layoutY="143.0" promptText="Ingrese n" />
+      <TextField fx:id="txtKVariaciones" layoutX="226.0" layoutY="188.0" promptText="Ingrese k" />
+      <Button fx:id="btnCalcularVariaciones" layoutX="269.0" layoutY="237.0" mnemonicParsing="false" onAction="#calcularVariaciones" text="Calcular " textAlignment="CENTER" />
       <Label layoutX="35.0" layoutY="73.0" prefHeight="63.0" prefWidth="545.0" text="Ingrese dos números enteros n y k tal que n sea mayor que k">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="35.0" layoutY="291.0" prefHeight="89.0" prefWidth="545.0">
+      <Label fx:id="txtAraeVariaciones" layoutX="35.0" layoutY="291.0" prefHeight="89.0" prefWidth="545.0">
          <font>
-            <Font size="32.0" />
+            <Font size="15.0" />
          </font>
       </Label>
    </children>

@@ -2,6 +2,9 @@ package co.uniquindio.edu.dicretas.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.uniquindio.edu.dicretas.Model.CalculadoraCombinatoria;
+import co.uniquindio.edu.dicretas.Model.CalculadoraPermutacion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,6 +33,14 @@ public class CombinatoriaController {
 
     @FXML
     void calcularCombinatoria(ActionEvent event) {
+        CalculadoraCombinatoria calculadoraCombinatoria = new CalculadoraCombinatoria();
+        String n = txtNCombinatoria.getText();
+        int nConvertido = Integer.parseInt(n);
+        String k = txtKCombinatoria.getText();
+        int kConvertido = Integer.parseInt(k);
+        calculadoraCombinatoria.setN((nConvertido));
+        calculadoraCombinatoria.setK((kConvertido));
+        txtAreaCombinatoria.setText(calculadoraCombinatoria.toString());
 
     }
 
