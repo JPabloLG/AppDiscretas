@@ -2,13 +2,13 @@ package co.uniquindio.edu.dicretas.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -24,7 +24,7 @@ public class CalculadoraController implements Initializable {
 
         switch (operacionSeleccionada) {
             case PERMUTACION:
-                mostrarVentana("Permutacion");
+                mostrarVentana("src/main/resources/co/uniquindio/edu/dicretas/Permutacion.fxml");
                 break;
             case VARIACIONES:
                 mostrarVentana("Variaciones");
@@ -49,11 +49,13 @@ public class CalculadoraController implements Initializable {
         ventana.initModality(Modality.APPLICATION_MODAL);
         ventana.initStyle(StageStyle.UNDECORATED);
 
+      
+
         // TODO: Implementar la carga de la vista correspondiente a cada tipo de operación
 
         ventana.setTitle(tituloVentana);
         ventana.show();
-    }
+   }
 
     public enum TipoOperacion {
         PERMUTACION,
