@@ -46,4 +46,8 @@ public class CalculadoraCombinatoria {
         }
         return resultado;
     }
+    @Override
+    public String toString() {
+        return "La combinatoria con n = " + n + " y  k = " + k + ", da como resultado = " + combinaciones();
+    }
 }

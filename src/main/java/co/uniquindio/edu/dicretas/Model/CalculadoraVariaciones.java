@@ -47,4 +47,9 @@ public class CalculadoraVariaciones {
         }
         return resultado;
     }
+
+    @Override
+    public String toString() {
+        return "La variacion con n = " + n + " y  k = " + k + ", da como resultado = " + variaciones();
+    }
 }

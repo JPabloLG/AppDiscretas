@@ -1,17 +1,16 @@
 package co.uniquindio.edu.dicretas.Controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import co.uniquindio.edu.dicretas.App;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class CalculadoraController implements Initializable {
 
@@ -19,12 +18,12 @@ public class CalculadoraController implements Initializable {
     private ComboBox<TipoOperacion> comb;
 
     @FXML
-    void Seleccionar(ActionEvent event) {
+    void Seleccionar(ActionEvent event) throws IOException {
         TipoOperacion operacionSeleccionada = comb.getSelectionModel().getSelectedItem();
 
         switch (operacionSeleccionada) {
             case PERMUTACION:
-                mostrarVentana("src/main/resources/co/uniquindio/edu/dicretas/Permutacion.fxml");
+                mostrarVentana("Permutacion");        
                 break;
             case VARIACIONES:
                 mostrarVentana("Variaciones");
@@ -44,18 +43,10 @@ public class CalculadoraController implements Initializable {
         comb.getSelectionModel().selectFirst();
     }
 
-    private void mostrarVentana(String tituloVentana) {
-        Stage ventana = new Stage();
-        ventana.initModality(Modality.APPLICATION_MODAL);
-        ventana.initStyle(StageStyle.UNDECORATED);
-
-      
-
-        // TODO: Implementar la carga de la vista correspondiente a cada tipo de operación
-
-        ventana.setTitle(tituloVentana);
-        ventana.show();
+    private  void mostrarVentana(String tituloVentana) throws IOException {
+        App.setRoot(tituloVentana);
    }
+
 
     public enum TipoOperacion {
         PERMUTACION,
