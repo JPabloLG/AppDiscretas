@@ -6,25 +6,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.edu.dicretas.Controller.PermutacionController">
    <children>
-      <Label layoutX="207.0" layoutY="26.0" prefHeight="47.0" prefWidth="187.0" text="Permutacion">
+      <Label layoutX="207.0" layoutY="26.0" prefHeight="47.0" prefWidth="187.0" text="Permutación">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNPermutacion" layoutX="226.0" layoutY="143.0" promptText="Ingrese n" />
-      <TextField fx:id="txtKPermutacion" layoutX="226.0" layoutY="188.0" promptText="Ingrese k" />
+      <TextField fx:id="txtNPermutacion" layoutX="226.0" layoutY="168.0" promptText="Ingrese n" />
       <Button fx:id="btnCalcularPermutacion" layoutX="269.0" layoutY="237.0" mnemonicParsing="false" onAction="#calcularPermutacion" text="Calcular " textAlignment="CENTER" />
-      <Label layoutX="49.0" layoutY="73.0" prefHeight="63.0" prefWidth="517.0" text="Ingrese dos números enteros n y k tal que n sea igual a k">
+      <Label layoutX="49.0" layoutY="73.0" prefHeight="63.0" prefWidth="517.0" text="Ingrese un número entero n que desee permutar">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <Label fx:id="txtAreaPermutacion" layoutX="35.0" layoutY="291.0" prefHeight="89.0" prefWidth="545.0">
          <font>
-            <Font size="32.0" />
+            <Font size="15.0" />
          </font>
       </Label>
    </children>

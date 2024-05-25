@@ -3,7 +3,6 @@ package co.uniquindio.edu.dicretas.Model;
 public class CalculadoraPermutacion {
 
     private int n;
-    private int k;
 
 
     public int getN() {
@@ -14,19 +13,8 @@ public class CalculadoraPermutacion {
         this.n = n;
     }
 
-    public int getK() {
-        return k;
-    }
-
-    public void setK(int k) {
-        this.k = k;
-    }
-
     public long permutaciones() {
-        if (n != k) {
-            return 0;
-        }
-        else if (n < 0) {
+        if (n < 0) {
             throw new IllegalArgumentException("El número debe ser mayor o igual a 0.");
         }
         long resultado = 1;
@@ -38,7 +26,7 @@ public class CalculadoraPermutacion {
 
     @Override
     public String toString() {
-        return "La permutación con n = " + n + " y  k = " + k + ", da como resultado = " + permutaciones();
+        return "La permutación de n = " + n + " , da como resultado = " + permutaciones();
     }
    
 }

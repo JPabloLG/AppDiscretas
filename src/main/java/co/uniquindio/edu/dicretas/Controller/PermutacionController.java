@@ -34,10 +34,7 @@ public class PermutacionController {
         CalculadoraPermutacion calculadoraPermutacion = new CalculadoraPermutacion();
         String n = txtNPermutacion.getText();
         int nConvertido = Integer.parseInt(n);
-        String k = txtNPermutacion.getText();
-        int kConvertido = Integer.parseInt(k);
         calculadoraPermutacion.setN((nConvertido));
-        calculadoraPermutacion.setK(kConvertido);
         txtAreaPermutacion.setText(calculadoraPermutacion.toString());
     }
 

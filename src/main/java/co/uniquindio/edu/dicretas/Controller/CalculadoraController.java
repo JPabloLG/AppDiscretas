@@ -40,13 +40,13 @@ public class CalculadoraController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         ObservableList<TipoOperacion> tiposOperacion = FXCollections.observableArrayList(TipoOperacion.values());
         comb.setItems(tiposOperacion);
-        comb.getSelectionModel().selectFirst();
+        comb.getSelectionModel();
     }
 
-    private  void mostrarVentana(String tituloVentana) throws IOException {
+    private void mostrarVentana(String tituloVentana) throws IOException {
         App.setRoot(tituloVentana);
-   }
-
+    }
+    
 
     public enum TipoOperacion {
         PERMUTACION,
